@@ -6,7 +6,6 @@ $(document).ready(function(){
     $("#canvas").toggle()
     $(".begin").fadeIn(3000)
     $(".start").fadeIn(3500);
-   
 
     
     $(".start").on("click", function(){
