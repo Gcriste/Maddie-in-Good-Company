@@ -67,3 +67,8 @@ html,body {
     font-family: 'Literata', serif;
   
   }
+
+  a:link {
+    color:white;
+    font-family: 'Literata', serif;
+  }
