@@ -40,12 +40,15 @@ html,body {
     margin: 0;
     padding: 0;
     overflow: hidden; 
+  
 }
 
 .start{
     background-color:black;
     display:none;
     opacity:0.6;
+    margin-top:220px;
+    text-align:center;
    
 }
 .start:hover{
@@ -53,3 +56,6 @@ html,body {
     opacity:1.0
 }
 
+.header{
+    text-align:center;
+}
