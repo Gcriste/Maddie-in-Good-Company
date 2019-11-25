@@ -7,7 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Photos</title>
 
-    <link rel="stylesheet" href="assets/style.css">
+   
+    <link rel="stylesheet" href="w3.css">
+    <style>
+    .mySlides {display:none;}
+    </style>
+   <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -18,7 +23,7 @@
 <body>
     <canvas id="canvas"></canvas>
 
-    <main class = "about">
+    <main class = "main">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -37,7 +42,18 @@
                         </div>
                 <div class="col-8">
                     <div>
-                        <p> Photos Goes here</p>
+
+                            <div class="w3-content w3-display-container">
+                              <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/AnalogMaddie.jpeg" style="max-width:100%; max-height:600px">
+                              <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/maddieingoodco.jpg" style="max-width:100%; max-height:600px">
+                              <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/maddieingoodco2.jpg" style="max-width:100%; max-height:600px">
+                              <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/maddieingoodco3.jpg" style="max-width:100%; max-height:600px">
+                            
+                              <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                              <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                            </div>
+                            
+                         
                     </div>
                 </div>
             </div>
@@ -58,6 +74,25 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="assets/app.js"></script>
+    <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+            </script>
 </body>
 
 </html>
