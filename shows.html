@@ -7,12 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shows</title>
 
-    <link rel="stylesheet" href="assets/style.css">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
 
+    <!DOCTYPE html>
+    <html lang="en">
+   
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="assets/style.css">
+      
+    
+  
 </head>
 
 <body>
@@ -25,19 +35,72 @@
                     <h1 class = "header"> Shows</h1>
                 </div>
             </div>
-
+            <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Logo</a>
+                      </div>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="welcome.html">HOME</a></li>
+                          <li><a href="about.html">ABOUT</a></li>
+                          <li><a href="music.html">MUSIC</a></li>
+                          <li><a href="photos.html">PHOTOS</a></li>
+                          <li><a href="videos.html">VIDEOS</a></li>
+                          <li><a href="#demo">SHOWS</a></li>
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                              <span class="caret"></span>
+                            </a>
+                            <!-- <ul class="dropdown-menu">
+                              <li><a href="#">Merchandise</a></li>
+                              <li><a href="#">Extras</a></li>
+                              <li><a href="#">Media</a></li>
+                            </ul> -->
+                          </li>
+                          <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
             <div class="row">
-                    <div class="col-2">
+                    <!-- <div class="col-2">
                             <div><a href="welcome.html" style = "color:white">Home</a></div>
                             <div><a href="about.html" style = "color:white">About</a></div>
                             <div><a href="music.html" style = "color:white">Music</a></div>
                             <div><a href="photos.html" style = "color:white">Photos</a></div>
                             <div><a href="videos.html" style = "color:white">Videos</a></div>
                             <div><a href="shows.html" style = "color:white">Shows</a></div>
-                        </div>
+                        </div> -->
                 <div class="col-8">
-                    <div>
-                        <p> Shows Goes here</p>
+                            <!-- Container (TOUR Section) -->
+                            
+                            
+                                <h3 class="text-center">UPCOMING TOUR DATES</h3>
+                                   
+                                <ul class="list-group">
+                                  <li class="list-group-item">January 5th @ The 5 Spot with Camden West</li>
+                                 
+                                </ul>
+                             
+                                <div class="row">
+                                        <div class="col-sm-4">
+                                          <p class="text-center"><strong>Name</strong></p><br>
+                                          <a href="#demo" data-toggle="collapse">
+                                            <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+                                          </a>
+                                          <div id="demo" class="collapse">
+                                            <p>Guitarist and Lead Vocalist</p>
+                                            <p>Loves long walks on the beach</p>
+                                            <p>Member since 1988</p>
+                                          </div>
+                                        </div>
+                            
                     </div>
                 </div>
             </div>

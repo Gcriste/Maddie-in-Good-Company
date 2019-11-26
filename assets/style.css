@@ -72,3 +72,6 @@ html,body {
     color:white;
     font-family: 'Literata', serif;
   }
+  .list-group-item{
+      color:black
+  }
