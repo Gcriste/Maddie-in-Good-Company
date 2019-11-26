@@ -8,14 +8,112 @@
     <title>Photos</title>
 
    
-    <link rel="stylesheet" href="w3.css">
-    <style>
-    .mySlides {display:none;}
-    .w3-left, .w3-right, .w3-badge {cursor:pointer}
-    .w3-badge {height:13px;width:13px;padding:0}
-    </style>
+  
     
    <link rel="stylesheet" href="assets/style.css">
+   <link rel="stylesheet" href="w3.css">
+   <style>
+   .mySlides {display:none;}
+   .w3-left, .w3-right, .w3-badge {cursor:pointer}
+   .w3-badge {height:13px;width:13px;padding:0}
+   </style>
+   <style>
+        body {
+          font-family: Arial;
+          margin: 0;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        img {
+          vertical-align: middle;
+        }
+        
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+        
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+        
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+        
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+        
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+        
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+        
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+        </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -45,7 +143,7 @@
                         </div>
                
             
-                        <div class="col-8">
+                        <!-- <div class="col-8">
                             <div class="w3-content w3-display-container">
                               <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/AnalogMaddie.jpeg" style="max-width:100%; max-height:600px">
                               <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/maddieingoodco.jpg" style="max-width:100%; max-height:600px">
@@ -59,14 +157,108 @@
                               <span class="w3-badge w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
                               <span class="w3-badge w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
                             </div>
-                        </div>
+                        </div> -->
+
+                        <h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="../Maddie-in-Good-Company/assets/images/AnalogMaddie.jpeg" style="max-width:60%; max-height:350px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="../Maddie-in-Good-Company/assets/images/maddieingoodco.jpg" style="max-width:60%; max-height:350px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="../Maddie-in-Good-Company/assets/images/maddieingoodco2.jpg" style="max-width:60%; max-height:350px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="../Maddie-in-Good-Company/assets/images/maddieingoodco3.jpg" style="max-width:60%; max-height:350px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="img_nature_wide.jpg" style="max-width:60%; max-height:350px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="img_snow_wide.jpg" style="max-width:60%; max-height:350px">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="../Maddie-in-Good-Company/assets/images/AnalogMaddie.jpeg" style="width:80%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Maddie-in-Good-Company/assets/images/maddieingoodco.jpg" style="width:80%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../Maddie-in-Good-Company/assets/images/maddieingoodco2.jpg" style="width:80%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./Maddie-in-Good-Company/assets/images/maddieingoodco3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
                       </div>                              
             </div>
         </div>
     </main>
 
 
-  
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
     <script>
     var slideIndex = 1;
 showDivs(slideIndex);
