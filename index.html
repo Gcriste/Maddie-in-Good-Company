@@ -33,9 +33,13 @@
   .person:hover {
     border-color: #f1f1f1;
   }
-  .carousel-inner img, iframe {
+  .carousel-inner img {
     -webkit-filter: grayscale(90%);
     filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-inner iframe {
     width: 100%; /* Set width to 100% */
     margin: auto;
   }
@@ -373,7 +377,7 @@
 
 <!-- Container for Media -->
 
-<div id = "media" class = "container">
+<div id = "media">
     <h3 class="text-center">Media</h3>
     <div id="myCarouseltwo" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -416,16 +420,14 @@
               <span class="sr-only">Next</span>
             </a>
         </div>
+    <div class = "container">
         <h3 class = "text-center"> Spotify Songs</h3>
-    <div class = "row text-center">
-
-        <div class = "col-xs-12 col-12">
-            <iframe class = "img-fluid" src="https://open.spotify.com/embed/artist/6kLV2oqFWrSvlFWlsw97QH" width="300" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
-
+            <div class = "row text-center">
+                <div class = "col-xs-12 col-12">
+                <iframe class = "img-fluid" src="https://open.spotify.com/embed/artist/6kLV2oqFWrSvlFWlsw97QH" width="300" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
     </div>
-
-
 </div>
 
 
