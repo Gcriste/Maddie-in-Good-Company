@@ -33,13 +33,7 @@
   .person:hover {
     border-color: #f1f1f1;
   }
-  .carousel-inner img {
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); /* make all photos black and white */ 
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-  }
-  .carousel-inner iframe {
+  .carousel-inner img, iframe {
     -webkit-filter: grayscale(90%);
     filter: grayscale(90%); /* make all photos black and white */ 
     width: 100%; /* Set width to 100% */
@@ -169,10 +163,10 @@
     opacity:0.9;
 }
 
-iframe{
+/* iframe{
     border:5px solid #777;
     border-radius:15px;
-}
+} */
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
