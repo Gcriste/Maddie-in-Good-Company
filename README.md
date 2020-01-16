@@ -3,3 +3,5 @@
 ### A website built for the band Maddie in Good Company
 
 ### To access site: www.maddieingoodcompany.com
+
+###### Copyright @Griffin Criste
