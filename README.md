@@ -4,4 +4,6 @@
 
 ### To access site: www.maddieingoodcompany.com
 
+#### Members: Maddie Turner, Chris Cannone, Griffin Criste
+
 ###### Copyright @Griffin Criste
