@@ -6,4 +6,4 @@
 
 #### Members: Maddie Turner, Chris Cannone, Griffin Criste
 
-###### Copyright @MaddieInGoodCompany
+###### Copyright @MaddieIn
