@@ -1,6 +1,6 @@
 # Maddie-in-Good-Company
 
-### A website built for the band Maddie in Good Company
+### The band Maddie in Good Company's official website
 
 ### To access site: www.maddieingoodcompany.com
 
