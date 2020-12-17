@@ -226,7 +226,7 @@
     }
 
     .tshirt {
-      border-radius:50%;
+      border-radius: 50%;
     }
 
     /* #store{
@@ -612,32 +612,58 @@
     <p>Maddie In Good Company Merchandise</p>
     <br>
     <div class="row">
-      <div class="col-sm-4"></div>
+      <div class="col-sm-2"></div>
       <div class="col-sm-4 text-center">
-        <img src="assets/images/maddieingoodcoshirt.jpg" class ="tshirt" width="255" height="305"> 
-      </div>
-    </div>
-        <div class="row">
-          <div class="col-sm-5"></div>
-      <div class="col-sm-1">
+        <img src="assets/images/maddieingoodcoshirt.jpg" class="tshirt" width="255" height="305">
         <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="429FRYFLW9BLC">
-          <table>
-          <tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr><tr><td><select name="os0">
-            <option value="Small">Small T-Shirt $25.00 USD</option>
-            <option value="Medium">Medium T-Shirt $25.00 USD</option>
-            <option value="Large">Large T-Shirt $25.00 USD</option>
-          </select> </td></tr>
+          <table class="center">
+            <tr>
+              <td><input type="hidden" name="on0" value="Sizes">Sizes</td>
+            </tr>
+            <tr>
+              <td><select name="os0">
+                  <option value="Small">Small - $25.00 USD</option>
+                  <option value="Medium">Medium - $25.00 USD</option>
+                  <option value="Large">Large - $25.00 USD</option>
+                </select> </td>
+            </tr>
           </table>
           <input type="hidden" name="currency_code" value="USD">
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit"
+            alt="PayPal - The safer, easier way to pay online!">
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
-          
-          </div>
+        </form>
       </div>
-      <!-- <div class="col-sm-4">
+      <div class="col-sm-4 text-center">
+        <img src="assets/images/blacktshirt.PNG" class="tshirt" width="255" height="305">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="5HHC86WA674QW">
+          <table class="center">
+            <tr>
+              <td><input type="hidden" name="on0" value="Sizes">Sizes</td>
+            </tr>
+            <tr class="text-center">
+              <td><select name="os0">
+                  <option value="Small">Small - $30.00 USD</option>
+                  <option value="Medium">Medium - $30.00 USD</option>
+                  <option value="Large">Large - $30.00 USD</option>
+                  <option value="XL">XL - $30.00 USD</option>
+                  <option value="XXL">XXL - $30.00 USD</option>
+                </select> </td>
+            </tr>
+          </table>
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit"
+            alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-sm-4">
         <p class="text-center"><strong>Hand Made Pins</strong></p><br>
         <a href="#demo" data-toggle="collapse">
         </a>
@@ -652,11 +678,6 @@
         <div id="demo3" class="collapse">
           <p>$5</p>>
         </div> -->
-      </div>
-    </div>
-  </div>
-
-
 
 
 
@@ -679,8 +700,8 @@
           <p><span class="glyphicon glyphicon-phone"></span>Phone: +1 (702) 845-9282</p>
           <p><span class="glyphicon glyphicon-envelope"></span>Email: MaddieInGoodCompany@gmail.com</p>
         </div>
-
-        <!-- <div class="col-md-8">
+      </div>
+      <!-- <div class="col-md-8">
       <div class="row">
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -699,7 +720,7 @@
     </div> -->
 
 
-      </div>
+
       <br>
       <br>
       <br>
@@ -744,6 +765,7 @@
         <span class="glyphicon glyphicon-chevron-up"></span>
       </a><br><br>
     </footer>
+  </div>
 
 
 
@@ -752,40 +774,39 @@
 
 
 
+  <script>
+    $(document).ready(function () {
+      // Initialize Tooltip
+      $('[data-toggle="tooltip"]').tooltip();
 
-    <script>
-      $(document).ready(function () {
-        // Initialize Tooltip
-        $('[data-toggle="tooltip"]').tooltip();
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
 
-        // Add smooth scrolling to all links in navbar + footer link
-        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
 
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
 
-            // Prevent default anchor click behavior
-            event.preventDefault();
+          // Store hash
 
-            // Store hash
+          var hash = this.hash;
 
-            var hash = this.hash;
+          // Using jQuery's animate() method to add smooth page scroll
 
-            // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
 
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
 
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 900, function () {
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
-
-            });
-          } // End if
-        });
-      })
-    </script>
+          });
+        } // End if
+      });
+    })
+  </script>
 
 
 
