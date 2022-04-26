@@ -270,6 +270,10 @@ iframe {
   background: linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
   width: 100%;
 }
+.listen-section img {
+  height: auto;
+  width: 100%;
+}
 
 .download-section {
   justify-content: center;
