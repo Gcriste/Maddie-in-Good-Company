@@ -2,301 +2,222 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Photos</title>
+  <title>ABOUT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="./styles.css" rel="stylesheet" type="text/css">
 
-   
-  
-    
-   <link rel="stylesheet" href="assets/style.css">
-   <link rel="stylesheet" href="w3.css">
-   <style>
-   .mySlides {display:none;}
-   .w3-left, .w3-right, .w3-badge {cursor:pointer}
-   .w3-badge {height:13px;width:13px;padding:0}
-   </style>
-   <style>
-        body {
-          font-family: Arial;
-          margin: 0;
-        }
-        
-        * {
-          box-sizing: border-box;
-        }
-        
-        img {
-          vertical-align: middle;
-        }
-        
-        /* Position the image container (needed to position the left and right arrows) */
-        .container {
-          position: relative;
-        }
-        
-        /* Hide the images by default */
-        .mySlides {
-          display: none;
-        }
-        
-        /* Add a pointer when hovering over the thumbnail images */
-        .cursor {
-          cursor: pointer;
-        }
-        
-        /* Next & previous buttons */
-        .prev,
-        .next {
-          cursor: pointer;
-          position: absolute;
-          top: 40%;
-          width: auto;
-          padding: 16px;
-          margin-top: -50px;
-          color: white;
-          font-weight: bold;
-          font-size: 20px;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
-          -webkit-user-select: none;
-        }
-        
-        /* Position the "next button" to the right */
-        .next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
-        }
-        
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover,
-        .next:hover {
-          background-color: rgba(0, 0, 0, 0.8);
-        }
-        
-        /* Number text (1/3 etc) */
-        .numbertext {
-          color: #f2f2f2;
-          font-size: 12px;
-          padding: 8px 12px;
-          position: absolute;
-          top: 0;
-        }
-        
-        /* Container for image text */
-        .caption-container {
-          text-align: center;
-          background-color: #222;
-          padding: 2px 16px;
-          color: white;
-        }
-        
-        .row:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-        
-        /* Six columns side by side */
-        .column {
-          float: left;
-          width: 16.66%;
-        }
-        
-        /* Add a transparency effect for thumnbail images */
-        .demo {
-          opacity: 0.6;
-        }
-        
-        .active,
-        .demo:hover {
-          opacity: 1;
-        }
-        </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
-  
 </head>
 
-<body>
-    <canvas id="canvas"></canvas>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <main class = "main">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class = "header"> Photos</h1>
-                </div>
-            </div>
 
-            <div class="row">
-                    <div class="col-2">
-                            <div><a href="welcome.html" style = "color:white">Home</a></div>
-                            <div><a href="about.html" style = "color:white">About</a></div>
-                            <div><a href="music.html" style = "color:white">Music</a></div>
-                            <div><a href="photos.html" style = "color:white">Photos</a></div>
-                            <div><a href="videos.html" style = "color:white">Videos</a></div>
-                            <div><a href="shows.html" style = "color:white">Shows</a></div>
-                        </div>
-               
-            
-                        <!-- <div class="col-8">
-                            <div class="w3-content w3-display-container">
-                              <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/AnalogMaddie.jpeg" style="max-width:100%; max-height:600px">
-                              <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/maddieingoodco.jpg" style="max-width:100%; max-height:600px">
-                              <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/maddieingoodco2.jpg" style="max-width:100%; max-height:600px">
-                              <img class="mySlides" src="../Maddie-in-Good-Company/assets/images/maddieingoodco3.jpg" style="max-width:100%; max-height:600px">
-                              <div class="w3-center w3-display-bottommiddle" style="width:100%">
-                              <button class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094; Prev</button>
-                              <button class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095; Next</button>
-                              <span class="w3-badge w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                              <span class="w3-badge w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                              <span class="w3-badge w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-                              <span class="w3-badge w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
-                            </div>
-                        </div> -->
-
-                        <h2 style="text-align:center">Slideshow Gallery</h2>
-
-<div class="container">
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="../Maddie-in-Good-Company/assets/images/AnalogMaddie.jpeg" style="max-width:60%; max-height:350px">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="../Maddie-in-Good-Company/assets/images/maddieingoodco.jpg" style="max-width:60%; max-height:350px">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="../Maddie-in-Good-Company/assets/images/maddieingoodco2.jpg" style="max-width:60%; max-height:350px">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="../Maddie-in-Good-Company/assets/images/maddieingoodco3.jpg" style="max-width:60%; max-height:350px">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="img_nature_wide.jpg" style="max-width:60%; max-height:350px">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="img_snow_wide.jpg" style="max-width:60%; max-height:350px">
-  </div>
-    
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="../Maddie-in-Good-Company/assets/images/AnalogMaddie.jpeg" style="width:80%" onclick="currentSlide(1)" alt="The Woods">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../Maddie-in-Good-Company/assets/images/maddieingoodco.jpg" style="width:80%" onclick="currentSlide(2)" alt="Cinque Terre">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../Maddie-in-Good-Company/assets/images/maddieingoodco2.jpg" style="width:80%" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../Maddie-in-Good-Company/assets/images/maddieingoodco3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-    </div>    
-    <div class="column">
-      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-    </div>
-  </div>
-</div>
-
-                      </div>                              
-            </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="nav navbar-nav navbar-center bg-1">
+            <h6 style="padding-left:20px;">Maddie in Good Company</h6>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="./index.html">HOME</a></li>
+              <li><a href="./about.html">ABOUT</a></li>
+              <li><a target="_blank" href="https://open.spotify.com/artist/6kLV2oqFWrSvlFWlsw97QH?si=Xen0klhnSpe5IGWMUiGswQ">MUSIC</a></li>
+              <li><a target="_blank" href="https://www.youtube.com/channel/UC4iFrS6hKpvFr3QVqszlwRQ">VIDEOS</a></li>
+              <li><a href="./shows.html">SHOWS</a></li>
+              <li><a href="./photos.html">PHOTOS</a></li>
+              <li><a href="./merch.html">MERCH</a></li>
+              <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+          </div>
         </div>
-    </main>
+      </nav>
 
 
 
 
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-</script>
-    <script>
-    var slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
-            </script>
 
-              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-              integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-          </script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-              integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-          </script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-              integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-          </script>
-      
-          <script src="https://code.jquery.com/jquery-3.4.1.js"
-              integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-          <script src="assets/app.js"></script>
+  <!-- Container (The ABOUT Section) -->
+  <div id="about" class="container">
+      <div class="text-center">    
+          <h3>PHOTOS</h3>
+    </div>
+
+      <div class="row">
+          <div class="col-sm-6">
+              <img width="100%" height="100%" src="./assets/updated-images/BlakePhotoshoot.JPEG">
+          </div>
+          <div class="col-sm-6">
+            <p>Maddie in Good Company was established in January 2018 at a Janis Joplin tribute show in nashville, tn at Exit In. The 3 piece clicked immediately, headed back to the house, ate pizza and jammed. High on life, the band was formed. The following weekend the band met and started writing songs. Over the last 4 years they have released 4 songs and are in the process of recording an album. The band has since expanded to be 8 members consisting of vocals, bgv, guitar, bass, drums, 2 saxophone players, and a keyboardist. The melting pot of musical background has created a new genre called “soul n roll”.  </p>
+            <p>The band’s mission is to encourage everyone to surround themselves in good company. They were lucky enough to find each other on a serendipitous night and have since become family. They want to share that feeling with others; If you don’t have it, you can get it with us. </p>
+          </div>
+      </div>
+
+
+    <!-- <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Maddie</strong></p><br>
+        <a href="#demo2" data-toggle="collapse">
+          <img src="assets/images/maddie.jpg" class="img-circle person" alt="Maddie" width="255" height="255">
+        </a>
+        <div id="demo2" class="collapse">
+          <p>Singer</p>
+          <p>Favorite Food: Chicky Chicky Parm Parm</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Chris</strong></p><br>
+        <a href="#demo" data-toggle="collapse">
+          <img src="assets/images/chris.jpg" class="img-circle person" alt="Chris" width="255" height="255">
+        </a>
+        <div id="demo" class="collapse">
+          <p>Guitarist</p>
+          <p>Favorite Food: Ceviche</p>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Griffin</strong></p><br>
+        <a href="#demo3" data-toggle="collapse">
+          <img src="assets/images/griffin.jpg" class="img-circle person" alt="Griffin" width="255" height="255">
+        </a>
+        <div id="demo3" class="collapse">
+          <p>Drummer</p>
+          <p>Favorite Food: (Baltimore) Crabcakes</p>
+        </div>
+      </div>
+    </div> -->
+
+    <div id="contact" class="bg-1">
+      <div class="container">
+        <h3 class="text-center">CONTACT</h3>
+        <!-- <p class="text-center"><em>We love our fans!</em></p> -->
+
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <!-- <p>Fan? Drop a note.</p> -->
+            <p><span class="glyphicon glyphicon-map-marker"></span>Nashville TN</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone: +1 (702) 845-9282</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: MaddieInGoodCompany@gmail.com</p>
+          </div>
+        </div>
+        </div>
+      </div><div id="contact" class="bg-1">
+        <div class="container">
+          <h3 class="text-center">CONTACT</h3>
+          <!-- <p class="text-center"><em>We love our fans!</em></p> -->
+  
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <!-- <p>Fan? Drop a note.</p> -->
+              <p><span class="glyphicon glyphicon-map-marker"></span>Nashville TN</p>
+              <p><span class="glyphicon glyphicon-phone"></span>Phone: +1 (702) 845-9282</p>
+              <p><span class="glyphicon glyphicon-envelope"></span>Email: MaddieInGoodCompany@gmail.com</p>
+            </div>
+          </div>
+          </div>
+        </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+    <footer class="text-center">
+      <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a><br><br>
+    </footer>
+  </div>
+
+
+
+
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      // Initialize Tooltip
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+
+          });
+        } // End if
+      });
+    })
+  </script>
+
+
+
 </body>
 
 </html>
