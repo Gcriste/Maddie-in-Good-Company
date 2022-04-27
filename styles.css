@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
-  color: #777;
+  /* color: #777; */
+  background-image: url('./assets//updated-images/Midnight City.jpg');
 }
 
 h3,
@@ -271,8 +272,14 @@ iframe {
   width: 100%;
 }
 .listen-section img {
-  height: auto;
+  height: 300px;
   width: 100%;
+}
+
+.liste-section img:hover {
+  background: -webkit-linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
+  background: -moz-linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
+  background: linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
 }
 
 .download-section {
@@ -291,4 +298,30 @@ iframe {
   padding-right: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
+}
+
+.bg-1 {
+  background: none;
+}
+
+h2 {
+  color: white;
+}
+
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
