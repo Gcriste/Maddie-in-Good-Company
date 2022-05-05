@@ -9,41 +9,177 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+    type='text/css'>
+  <link href="./styles.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link href="./styles.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/310cf36ef2.js" crossorigin="anonymous"></script>
 
 </head>
+
+<style>
+  main section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 0;
+  }
+
+  main section .carousel-container {
+    width: 100%;
+    height: 50rem;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.375rem;
+  }
+
+  main section .carousel-container .item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+    animation: fade 0.3s ease-in-out;
+  }
+
+  main section .carousel-container .item .numbertext {
+    padding: 0.5rem 0.75rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 0.9375rem;
+    font-size: 0.875rem;
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  main section .carousel-container .item .image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  main section .carousel-container .item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  main section .carousel-container .item .text {
+    width: 100%;
+    padding: 0.625rem 0.9375rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.9rem;
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  main section .carousel-container .item .text .title {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  main section .carousel-container .prev,
+  main section .carousel-container .next {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.3125rem;
+    position: absolute;
+    top: calc(50% - 1rem);
+    user-select: none;
+    font-size: 1rem;
+    color: #f2f2f2;
+    border-radius: 50%;
+    transition: 0.6s ease;
+  }
+
+  main section .carousel-container .prev:focus,
+  main section .carousel-container .prev:hover,
+  main section .carousel-container .next:focus,
+  main section .carousel-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  main section .carousel-container .prev {
+    left: 0.8rem;
+  }
+
+  main section .carousel-container .next {
+    right: 0.8rem;
+  }
+
+  main section .carousel-container .dots {
+    padding: 0.9375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main section .carousel-container .dots .dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin: 0 0.125rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #bbb;
+    transition: background-color 0.6s ease;
+  }
+
+  main section .carousel-container .dots .dot:focus,
+  main section .carousel-container .dots .dot:hover {
+    background-color: #717171;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.8;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fa-angle-right,
+  .fa-angle-left {
+    font-size: 20px;
+  }
+
+</style>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="nav navbar-nav navbar-center bg-1">
-            <h6 style="padding-left:20px;">Maddie in Good Company</h6>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="./index.html">HOME</a></li>
-              <li><a href="./about.html">ABOUT</a></li>
-              <li><a target="_blank" href="https://open.spotify.com/artist/6kLV2oqFWrSvlFWlsw97QH?si=Xen0klhnSpe5IGWMUiGswQ">MUSIC</a></li>
-              <li><a target="_blank" href="https://www.youtube.com/channel/UC4iFrS6hKpvFr3QVqszlwRQ">VIDEOS</a></li>
-              <li><a href="./shows.html">SHOWS</a></li>
-              <li><a href="./photos.html">PHOTOS</a></li>
-              <li><a href="./merch.html">MERCH</a></li>
-              <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="nav navbar-nav navbar-center bg-1">
+        <h6 style="padding-left:20px;">Maddie in Good Company</h6>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a target="_blank"
+              href="https://open.spotify.com/artist/6kLV2oqFWrSvlFWlsw97QH?si=Xen0klhnSpe5IGWMUiGswQ">MUSIC</a></li>
+          <li><a target="_blank" href="https://www.youtube.com/channel/UC4iFrS6hKpvFr3QVqszlwRQ">VIDEOS</a></li>
+          <li><a href="./shows.html">SHOWS</a></li>
+          <li><a href="./photos.html">PHOTOS</a></li>
+          <li><a href="./merch.html">MERCH</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
 
@@ -54,56 +190,37 @@
 
   <!-- Container (The ABOUT Section) -->
   <div id="about" class="container">
-      <div class="text-center">    
-          <h3>PHOTOS</h3>
+    <div class="text-center">
+      <h3>PHOTOS</h3>
     </div>
 
-      <div class="row">
-          <div class="col-sm-6">
-              <img width="100%" height="100%" src="./assets/updated-images/BlakePhotoshoot.JPEG">
+
+    <main>
+      <section class="has-dflex-center">
+        <div class="lx-container-80">
+          <div class="lx-row">
+            <div class="lx-card carousel-container">
+              <div class="item">
+                <div class="image"><img src="./assets/updated-images/troubledmind.jpg" /></div>
+              </div>
+              <div class="item">
+                <div class="image"><img src="./assets/updated-images/IdBeGone.JPEG" /></div>
+                <div class="text is-text-left">
+                  <h1 class="title"> </h1>
+                </div>
+              </div>
+              <div class="item">
+                <div class="image"><img src="./assets/updated-images/underdog.jpg" /></div>
+                <div class="text is-text-centered">
+                  <p> </p>
+                </div>
+              </div><a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a
+                class="next has-dflex-center"><i class="fas fa-angle-right"></i></a>
+            </div>
           </div>
-          <div class="col-sm-6">
-            <p>Maddie in Good Company was established in January 2018 at a Janis Joplin tribute show in nashville, tn at Exit In. The 3 piece clicked immediately, headed back to the house, ate pizza and jammed. High on life, the band was formed. The following weekend the band met and started writing songs. Over the last 4 years they have released 4 songs and are in the process of recording an album. The band has since expanded to be 8 members consisting of vocals, bgv, guitar, bass, drums, 2 saxophone players, and a keyboardist. The melting pot of musical background has created a new genre called “soul n roll”.  </p>
-            <p>The band’s mission is to encourage everyone to surround themselves in good company. They were lucky enough to find each other on a serendipitous night and have since become family. They want to share that feeling with others; If you don’t have it, you can get it with us. </p>
-          </div>
-      </div>
-
-
-    <!-- <br>
-    <div class="row">
-      <div class="col-sm-4">
-        <p class="text-center"><strong>Maddie</strong></p><br>
-        <a href="#demo2" data-toggle="collapse">
-          <img src="assets/images/maddie.jpg" class="img-circle person" alt="Maddie" width="255" height="255">
-        </a>
-        <div id="demo2" class="collapse">
-          <p>Singer</p>
-          <p>Favorite Food: Chicky Chicky Parm Parm</p>
         </div>
-      </div>
-      <div class="col-sm-4">
-        <p class="text-center"><strong>Chris</strong></p><br>
-        <a href="#demo" data-toggle="collapse">
-          <img src="assets/images/chris.jpg" class="img-circle person" alt="Chris" width="255" height="255">
-        </a>
-        <div id="demo" class="collapse">
-          <p>Guitarist</p>
-          <p>Favorite Food: Ceviche</p>
-        </div>
-      </div>
-
-
-      <div class="col-sm-4">
-        <p class="text-center"><strong>Griffin</strong></p><br>
-        <a href="#demo3" data-toggle="collapse">
-          <img src="assets/images/griffin.jpg" class="img-circle person" alt="Griffin" width="255" height="255">
-        </a>
-        <div id="demo3" class="collapse">
-          <p>Drummer</p>
-          <p>Favorite Food: (Baltimore) Crabcakes</p>
-        </div>
-      </div>
-    </div> -->
+      </section>
+    </main>
 
     <div id="contact" class="bg-1">
       <div class="container">
@@ -118,22 +235,8 @@
             <p><span class="glyphicon glyphicon-envelope"></span>Email: MaddieInGoodCompany@gmail.com</p>
           </div>
         </div>
-        </div>
-      </div><div id="contact" class="bg-1">
-        <div class="container">
-          <h3 class="text-center">CONTACT</h3>
-          <!-- <p class="text-center"><em>We love our fans!</em></p> -->
-  
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <!-- <p>Fan? Drop a note.</p> -->
-              <p><span class="glyphicon glyphicon-map-marker"></span>Nashville TN</p>
-              <p><span class="glyphicon glyphicon-phone"></span>Phone: +1 (702) 845-9282</p>
-              <p><span class="glyphicon glyphicon-envelope"></span>Email: MaddieInGoodCompany@gmail.com</p>
-            </div>
-          </div>
-          </div>
-        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -166,13 +269,13 @@
 
 
 
-    <!-- Footer -->
+  <!-- Footer -->
 
-    <footer class="text-center">
-      <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-      </a><br><br>
-    </footer>
+  <footer class="text-center">
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+  </footer>
   </div>
 
 
@@ -183,7 +286,11 @@
 
 
   <script>
+
+
+
     $(document).ready(function () {
+
       // Initialize Tooltip
       $('[data-toggle="tooltip"]').tooltip();
 
@@ -214,6 +321,94 @@
         } // End if
       });
     })
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".carousel-container").forEach((carousel) => {
+        insertNumbers(carousel);
+
+        carousel.querySelector(".prev").addEventListener("click", (e) => {
+          minusItem(carousel);
+        });
+
+        carousel.querySelector(".next").addEventListener("click", () => {
+          plusItem(carousel);
+        });
+
+        insertDots(carousel);
+
+        carousel.querySelectorAll(".dot").forEach((dot) => {
+          dot.addEventListener("click", (e) => {
+            let item = Array.prototype.indexOf.call(
+              e.target.parentNode.children,
+              e.target
+            );
+
+            showItems(carousel, item);
+          });
+        });
+
+        showItems(carousel, 0);
+      });
+    });
+
+    function insertNumbers(carousel) {
+      const length = carousel.querySelectorAll(".item").length;
+      for (let i = 0; i < length; i++) {
+        const nmbr = document.createElement("div");
+        nmbr.classList.add("numbertext");
+        nmbr.innerText = i + 1 + " / " + length;
+
+        carousel.querySelectorAll(".item")[i].append(nmbr);
+      }
+    }
+
+    function insertDots(carousel) {
+      const dots = document.createElement("div");
+      dots.classList.add("dots");
+
+      carousel.append(dots);
+
+      carousel.querySelectorAll(".item").forEach((elem) => {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+
+        carousel.querySelector(".dots").append(dot);
+      });
+    }
+
+    function plusItem(carousel) {
+      let item = currentItem(carousel);
+
+      carousel
+        .querySelectorAll(".item")
+      [item].nextElementSibling.classList.contains("item")
+        ? showItems(carousel, item + 1)
+        : showItems(carousel, 0);
+    }
+
+    function minusItem(carousel) {
+      let item = currentItem(carousel);
+
+      carousel.querySelectorAll(".item")[item].previousElementSibling != null
+        ? showItems(carousel, item - 1)
+        : showItems(carousel, carousel.querySelectorAll(".item").length - 1);
+    }
+
+    function currentItem(carousel) {
+      return [...carousel.querySelectorAll(".item")].findIndex(
+        (item) => item.style.display == "block"
+      );
+    }
+
+    function showItems(carousel, item) {
+      if (carousel.querySelectorAll(".item")[currentItem(carousel)] != undefined)
+        carousel.querySelectorAll(".item")[currentItem(carousel)].style.display =
+          "none";
+      carousel.querySelectorAll(".item")[item].style.display = "block";
+
+      if (carousel.querySelector(".dot.active") != null)
+        carousel.querySelector(".dot.active").classList.remove("active");
+      carousel.querySelectorAll(".dot")[item].classList.add("active");
+    }
   </script>
 
 
