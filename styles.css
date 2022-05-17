@@ -4,13 +4,14 @@ body {
   background-image: url('./assets//updated-images/Midnight City.jpg');
   color: white;
 }
-
-h3,
+H3 {
+  margin: 10px 0 30px 0;
+}
 h4 {
   margin: 10px 0 30px 0;
-  letter-spacing: 6px;
+  /* letter-spacing: 6px;
   font-size: 18px;
-  color: white;
+  color: white; */
 }
 
 .container {
@@ -21,8 +22,29 @@ h4 {
   margin-top: 40px;
   padding-top: 60px;
 } */
+
+#about {
+  font-weight: 600;
+}
+
 #contact {
-  padding-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid black;
+  /* background-color: white; */
+  width: 100%;
+  flex-shrink: 0;
+  padding-bottom: 0px;
+  color: black;
+  background-color: #f8f8f8;
+  font-weight: 600;
+}
+
+#contact h2 {
+  color: black;
+}
+
+#contact footer span {
+  color: black;
 }
 
 .person {
@@ -67,6 +89,9 @@ h4 {
     display: none;
     /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
+  .social-container {
+    margin-top: 30px;
+  }
 }
 
 .bg-1 {
@@ -85,7 +110,8 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #8c9bb5; */
+  background-color: #f8f8f8;
+  font-weight: 600;
 }
 .list-group-item:first-child {
   border-top-right-radius: 0;
@@ -132,7 +158,6 @@ h4 {
 }
 
 .modal-header,
-h4,
 .close {
   background-color: #333;
   color: #fff !important;
@@ -209,6 +234,10 @@ footer a {
 footer a:hover {
   color: #777;
   text-decoration: none;
+}
+.social-container-footer > a > i {
+  /* color: #337ab7; */
+  color: black;
 }
 
 textarea {
@@ -300,14 +329,16 @@ iframe {
   background: -webkit-linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
   background: -moz-linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
   background: linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
+
   width: 100%;
 }
 .listen-section img {
   height: 300px;
   width: 100%;
+  opacity: 0.7;
 }
 
-.liste-section img:hover {
+.listen-section img:hover {
   background: -webkit-linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
   background: -moz-linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
   background: linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
@@ -341,6 +372,7 @@ iframe {
 
 h2 {
   color: white;
+  padding-bottom: 10px;
 }
 
 .hvr-grow {
@@ -359,6 +391,7 @@ h2 {
 .hvr-grow:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  opacity: 1;
 }
 
 .fab {
@@ -401,4 +434,19 @@ h1 {
   color: white;
   padding-left: 4px;
   font-size: 12px;
+}
+
+.glyphicon {
+  padding-right: 2px;
+  color: black;
+}
+.link-text {
+  color: #337ab7;
+}
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
 }
