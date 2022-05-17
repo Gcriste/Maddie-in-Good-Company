@@ -23,6 +23,12 @@ h4 {
   padding-top: 60px;
 } */
 
+#listen {
+  padding-top: 0px;
+}
+#tour {
+  padding-top: 0px;
+}
 #about {
   font-weight: 600;
 }
