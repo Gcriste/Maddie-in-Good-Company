@@ -325,17 +325,16 @@ iframe {
     background-size: cover;
   }
 }
-.listen-section {
+/* .listen-section {
   background: -webkit-linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
   background: -moz-linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
   background: linear-gradient(360deg, #1c1c1c 10%, #494949 360%);
 
   width: 100%;
-}
+} */
 .listen-section img {
   height: 300px;
   width: 100%;
-  opacity: 0.7;
 }
 
 .listen-section img:hover {
@@ -391,7 +390,6 @@ h2 {
 .hvr-grow:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  opacity: 1;
 }
 
 .fab {
