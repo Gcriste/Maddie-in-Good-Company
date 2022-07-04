@@ -168,16 +168,34 @@
 
     <h2 class="text-center margin-small">UPCOMING SHOWS</h2>
     <ul class="list-group">
-      <li class="list-group-item black-text">
-        <div>May 21 @ Dee's Lounge</div>
-        <a target="_blank" href="https://deeslounge.com/shows-events/"><button
-            class="btn btn-primary padding-button">Tickets</button></a>
-      </li>
-      <li class="list-group-item black-text">
-        <div>May 28 @City Winery </div><a target="_blank"
-          href="https://citywinery.com/nashville/Online/default.asp?BOparam::WScontent::loadArticle::permalink=NSH-Toast-and-Jam-5-28-22-12pm&BOparam::WScontent::loadArticle::context_id="><button
-            class="btn btn-primary padding-button">Tickets</button></a>
-      </li>
+      <div class="show-0">
+        <li class="list-group-item black-text">
+          <div class="show-info">
+            <div class="date">May21 </div>
+            <div> @ Dee's Lounge</div>
+          </div>
+          <a target="_blank" href="https://deeslounge.com/shows-events/"><button
+              class="btn btn-primary padding-button">Tickets</button></a>
+        </li>
+      </div>
+      <div class="show-1">
+        <li class="list-group-item black-text">
+          <div class="show-info">
+            <div class="date">May28 </div>
+            <div> @ City Winery</div>
+          </div><a target="_blank"
+            href="https://citywinery.com/nashville/Online/default.asp?BOparam::WScontent::loadArticle::permalink=NSH-Toast-and-Jam-5-28-22-12pm&BOparam::WScontent::loadArticle::context_id="><button
+              class="btn btn-primary padding-button">Tickets</button></a>
+        </li>
+      </div>
+      <div class="show-2">
+        <li class="list-group-item black-text">
+          <div class="show-info">
+            <div class="date">Aug27 </div>
+            <div> @ The Underdog</div>
+          </div><a target="_blank" href="#"><button class="btn btn-primary padding-button" disabled>Tickets</button></a>
+        </li>
+      </div>
     </ul>
   </div>
 
@@ -476,6 +494,45 @@
 
   <script>
     $(document).ready(function () {
+      //handle date
+
+      const dateVal = $('.date').text().split(' ').filter((i) => i !== null && i !== '')
+
+
+      const formattedDates = dateVal.map((i) => new Date(`${i}, 2022`))
+
+      const todaysDate = new Date()
+
+
+      const futureDates = formattedDates.map((i) => i.getTime() > todaysDate.getTime() ? i : null)
+
+
+      futureDates.forEach((i, idx) => {
+        const vall = dateVal?.[idx]
+        // console.log(`vall ${vall}`)
+        const val = $('.show').text()
+
+        // console.log(`future dates ${i}`)
+        // const options = { month: 'long' }
+        // const month = i?.getUTCMonth()
+        // console.log(month)
+        // const formattedMonth = new Intl.DateTimeFormat('en-US', options).format(month)
+        // const monthAndDay = `${formattedMonth} ${i?.getDay()}`
+        // console.log(monthAndDay)
+        // console.log($('.show').text())
+        if ($(`.show-${idx}`).text().includes(vall) && i) {
+          // console.log(idx)
+          $(`.show-${idx}`).addClass('show-active');
+          $(`.date`).html(new Date(i).toLocaleDateString('en-us', { year: "numeric", month: "short", day: "numeric" }))
+        }
+        else {
+
+          $(`.show-${idx}`).addClass('show-unactive');
+        }
+      })
+
+
+      // document.getElementById('show')
       // Initialize Tooltip
       $('[data-toggle="tooltip"]').tooltip();
 

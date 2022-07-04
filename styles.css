@@ -454,3 +454,15 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+.show-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.show-unactive {
+  display: none !important;
+}
+.date {
+  padding-right: 5px;
+}
