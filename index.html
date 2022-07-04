@@ -522,12 +522,15 @@
         // console.log($('.show').text())
         if ($(`.show-${idx}`).text().includes(vall) && i) {
           // console.log(idx)
+          $('.date').html(new Date(i).toLocaleDateString('en-us', { year: "numeric", month: "short", day: "numeric" }))
           $(`.show-${idx}`).addClass('show-active');
-          $(`.date`).html(new Date(i).toLocaleDateString('en-us', { year: "numeric", month: "short", day: "numeric" }))
+
         }
         else {
 
           $(`.show-${idx}`).addClass('show-unactive');
+
+          // $(`.show-${idx}`).style.display = 'none'
         }
       })
 
