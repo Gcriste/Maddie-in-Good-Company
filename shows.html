@@ -61,7 +61,7 @@
     <div class="container">
       <h2 class="text-center">UPCOMING SHOWS</h2>
       <ul class="list-group">
-        <div class="show-0">
+        <!-- <div class="show-0">
           <li class="list-group-item black-text">
             <div class="show-info">
               <div class="date">May21 </div>
@@ -70,8 +70,8 @@
             <a target="_blank" href="https://deeslounge.com/shows-events/"><button
                 class="btn btn-primary padding-button">Tickets</button></a>
           </li>
-        </div>
-        <div class="show-1">
+        </div> -->
+        <!-- <div class="show-1">
           <li class="list-group-item black-text">
             <div class="show-info">
               <div class="date">May28 </div>
@@ -80,11 +80,38 @@
               href="https://citywinery.com/nashville/Online/default.asp?BOparam::WScontent::loadArticle::permalink=NSH-Toast-and-Jam-5-28-22-12pm&BOparam::WScontent::loadArticle::context_id="><button
                 class="btn btn-primary padding-button">Tickets</button></a>
           </li>
+        </div> -->
+        <div class="show-0">
+          <li class="list-group-item black-text">
+            <div class="show-info">
+              <div class="date-0 date">Jan21 </div>
+              <div> @ The Underdog</div>
+            </div><a target="_blank" href="#"><button class="btn btn-primary padding-button"
+                disabled>Tickets</button></a>
+          </li>
+        </div>
+        <div class="show-1">
+          <li class="list-group-item black-text">
+            <div class="show-info">
+              <div class="date-1 date">Feb18 </div>
+              <div> @ The Underdog</div>
+            </div><a target="_blank" href="#"><button class="btn btn-primary padding-button"
+                disabled>Tickets</button></a>
+          </li>
         </div>
         <div class="show-2">
           <li class="list-group-item black-text">
             <div class="show-info">
-              <div class="date">Aug27 </div>
+              <div class="date-2 date">Mar18 </div>
+              <div> @ The Underdog</div>
+            </div><a target="_blank" href="#"><button class="btn btn-primary padding-button"
+                disabled>Tickets</button></a>
+          </li>
+        </div>
+        <div class="show-3">
+          <li class="list-group-item black-text">
+            <div class="show-info">
+              <div class="date-3 date">Apr15 </div>
               <div> @ The Underdog</div>
             </div><a target="_blank" href="#"><button class="btn btn-primary padding-button"
                 disabled>Tickets</button></a>
@@ -204,19 +231,24 @@
 
       const dateVal = $('.date').text().split(' ').filter((i) => i !== null && i !== '')
 
-
-      const formattedDates = dateVal.map((i) => new Date(`${i}, 2022`))
+      console.log('ate', dateVal)
+      const formattedDates = dateVal.map((i) => new Date(`${i}, 2023`))
 
       const todaysDate = new Date()
+
+      console.log('for', formattedDates)
 
 
       const futureDates = formattedDates.map((i) => i.getTime() > todaysDate.getTime() ? i : null)
 
-
+      console.log('fu', futureDates)
       futureDates.forEach((i, idx) => {
-        const vall = dateVal?.[idx]
+        const val = dateVal?.[idx]
+        console.log('vall', val)
+        console.log('i', i, 'idx', idx)
         // console.log(`vall ${vall}`)
-        const val = $('.show').text()
+        // const val = $('.show').text()
+        // console.log('val', val)
 
         // console.log(`future dates ${i}`)
         // const options = { month: 'long' }
@@ -226,13 +258,16 @@
         // const monthAndDay = `${formattedMonth} ${i?.getDay()}`
         // console.log(monthAndDay)
         // console.log($('.show').text())
-        if ($(`.show-${idx}`).text().includes(vall) && i) {
-          // console.log(idx)
-          $('.date').html(new Date(i).toLocaleDateString('en-us', { year: "numeric", month: "short", day: "numeric" }))
+        console.log('texthere', $(`.show-${idx}`).text())
+        if ($(`.show-${idx}`).text().includes(val) && i) {
+
+          console.log(new Date(i).toLocaleDateString('en-us', { year: "numeric", month: "short", day: "numeric" }))
+          $(`.date-${idx}`).html(new Date(i).toLocaleDateString('en-us', { year: "numeric", month: "short", day: "numeric" }))
           $(`.show-${idx}`).addClass('show-active');
 
         }
         else {
+
 
           $(`.show-${idx}`).addClass('show-unactive');
 
